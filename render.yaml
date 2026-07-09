@@ -1,0 +1,34 @@
+# Render Blueprint — free-tier backend (https://render.com/docs/blueprint-spec)
+# Connect this repo in Render → New → Blueprint
+services:
+  - type: web
+    name: crop-copilot-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PYTHON_PATH
+        value: python3
+      - key: DATABASE_SSL
+        value: "true"
+      - key: EARTHSEARCH_FALLBACK
+        value: "true"
+      - key: STAC_API_URL
+        value: https://earth-search.aws.element84.com/v1
+      - key: MAX_CLOUD_COVER_PERCENT
+        value: "20"
+      - key: MIN_VALID_PIXEL_PERCENT
+        value: "60"
+      # Set these in the Render dashboard (secrets):
+      - key: DATABASE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: CDSE_CLIENT_ID
+        sync: false
+      - key: CDSE_CLIENT_SECRET
+        sync: false

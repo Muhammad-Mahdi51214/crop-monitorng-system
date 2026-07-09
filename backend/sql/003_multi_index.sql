@@ -1,0 +1,13 @@
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS ndre_mean DOUBLE PRECISION;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS ndwi_mean DOUBLE PRECISION;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS anomaly_zscore_ndre DOUBLE PRECISION;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS valid_pixel_percent DOUBLE PRECISION;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS cloud_cover_percent DOUBLE PRECISION;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS scene_datetime TIMESTAMPTZ;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS platform TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS product_level TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS data_source TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS sensor TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS ndre_image TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS ndwi_image TEXT;
+ALTER TABLE field_analyses ADD COLUMN IF NOT EXISTS analysis_status TEXT DEFAULT 'ok';

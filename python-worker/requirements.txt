@@ -1,0 +1,6 @@
+pystac-client>=0.8.0
+rasterio>=1.4.0
+shapely>=2.0.0
+numpy>=2.0.0
+requests>=2.31.0
+Pillow>=10.0.0

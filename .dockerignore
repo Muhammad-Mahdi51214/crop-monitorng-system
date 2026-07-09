@@ -1,0 +1,15 @@
+node_modules
+.next
+dist
+.git
+.env
+.env.*
+backend/.env
+frontend/.env.local
+python-worker/output
+python-worker/__pycache__
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
