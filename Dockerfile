@@ -1,4 +1,4 @@
-# AgroAI API — Express + Python satellite worker (Render / Fly / any Docker host)
+# AgroAI API — Express + Python satellite worker (Railway / Render / any Docker host)
 FROM node:20-bookworm-slim AS build
 
 WORKDIR /app/backend
