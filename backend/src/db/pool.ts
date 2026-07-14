@@ -3,7 +3,7 @@ import { env } from "../config/env.js";
 
 const useSsl =
   env.DATABASE_SSL ||
-  /supabase\.co|neon\.tech|render\.com/.test(env.DATABASE_URL);
+  /supabase\.co|neon\.tech|render\.com|railway\.app|rlwy\.net|proxy\.rlwy\.net|aivencloud\.com/.test(env.DATABASE_URL);
 
 export const pool = new pg.Pool({
   connectionString: env.DATABASE_URL,
