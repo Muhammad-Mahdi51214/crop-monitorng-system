@@ -21,14 +21,6 @@ export function createApp() {
 
   app.use("/imagery", express.static(imageryOutputDir));
 
-  app.get("/health", async (_req, res) => {
-    try {
-      await pool.query("SELECT 1");
-      res.json({ status: "ok", database: "connected" });
-    } catch {
-      res.status(503).json({ status: "degraded", database: "disconnected" });
-    }
-  });
 
   app.use("/fields", fieldsRouter);
   app.use("/fields/:id", analysisRouter);
